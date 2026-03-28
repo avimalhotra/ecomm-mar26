@@ -1,2 +1,3 @@
-# ecomm-mar26
-Ecommerce Project built using Figma
+# Shopping Website 
+
+## Figma to HTML , Project 2
