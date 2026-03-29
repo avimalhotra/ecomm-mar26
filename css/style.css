@@ -26,15 +26,14 @@ body{
 .justify-right{ justify-content: right;}
 .img-resp{ max-width: 100%; height: auto;}
 .text-center{ text-align: center;}
-.gap-1{ gap: 1rem;}
-.gap-2{ gap: 2rem;}
-.gap-3{ gap: 3rem;}
+
 
 .row{
      display: grid;
      grid-template-columns: repeat(12, 1fr);
      gap: 2rem;
 }
+
 
 .col-1{ grid-column: span 1;}
 .col-2{ grid-column: span 2;}
@@ -48,6 +47,13 @@ body{
 .col-10{ grid-column: span 10;}
 .col-11{ grid-column: span 11;}
 .col-12{ grid-column: span 12;}
+
+.gap-0{ gap: 0;}
+.gap-1{ gap: 1rem;}
+.gap-2{ gap: 2rem;}
+.gap-3{ gap: 3rem;}
+.gap-4{ gap: 4rem;}
+.gap-5{ gap: 5rem;}
 
 
 /* header */
@@ -65,11 +71,64 @@ header :is(.search,.menu){ border: none; background: #f6f6f6; border-radius: 8px
 
 /* banner */
 
+.banner{ position: relative; }
+.banner img{ width: 100%;  height: auto;}
+.banner .controls{ position: absolute; border: none; background: none; color: #fff; font-size: 40px; top: 50%; transform: translateY(-50%);}
+.banner .prev{ left: 0;}
+.banner .next{ right: 0;}
+.banner progress{ position: absolute; bottom: 49px; left: 50%; transform: translateX(-50%); background: none; width: 125px; height: 10px;}
+.banner progress::-webkit-progress-bar{ background: #fff8; border-radius: 5px}
+.banner progress::-webkit-progress-value{ background: #fff; border-radius: 5px 0 0 5px;}
+.banner .caption{ position: absolute; left: 190px; max-width: 440px; top: 50%; transform: translateY(-50%); color: #fff; }
+.banner .caption p{ font-size: 32px; }
+.banner .caption p.text-lg{ font-size: 78px; line-height: 1; font-weight: 800; margin: 4rem 0;}
+.banner .caption a{ display: block; width: 240px; line-height: 61px; background: #fff; text-align: center; color: #3C4242; font-size: 24px; border-radius: 8px; margin-top: 4rem;}
+
+
+main{ padding: 130px 0 136px;}
+
+.deal{ position: relative; color: #fff; }
+.deal-text{ position: absolute; left: 28px; top: 50%; transform: translateY(-50%); }
+.deal-text .p1{ font-size: 18px; line-height: 30px; }
+.deal-text .p2{ font-size: 34px; margin: 25px 0 8px; }
+.deal-text a{ color: inherit; margin-top: 42px; display: inline-block; font-size: 20px; text-decoration: underline 1px #fff; }
+
+
+h2.pill{ font-size: 34px; line-height: 31px; margin:10rem 0 7rem; position: relative; padding-left: 26px;}
+h2.pill::before{ content: ''; position: absolute; left: 0; width: 6px; height: 30px; background: #8A33FD; border-radius: 3px; }
+
+.new-arrival{ position: relative; }
+.new-arrival .row{ padding: 0 37px;}
+.new-arrival .product img{ border-radius: 12px; }
+.new-arrival .product h3{ margin-top: 32px; }
+.new-arrival .product a{ color: inherit;}
+.new-arrival .controls{ position: absolute; top: 50%; transform: translateY(100%); background: none; border: none; }
+.new-arrival .controls.prev{ left: 0;}
+.new-arrival .controls.next{ right: 0;}
+
+.everyday{ margin: 10rem 0;}
+.everyday img{ width: 100%; height: auto; }
+
+
+.category img{ width: 100%; height: auto; border-radius: 8px; }
+.category .details{ margin-top: 2rem;}
+.category h3{ color: #2A2F2F; margin-bottom: 4px;}
+.category a{ color: #7f7f7f;}
+
+
+.in-the-limelight{ margin: 10rem 0;}
+
+
+
+
+footer{ background: #3C4242; color: #ffff; padding: 60px 0;}
+
 
 
 @media screen and (max-width:1279px){
      nav ul{ gap: 2rem;}
      header form{ width: 200px;}
+     .banner .caption{ left: 120px;}
 }
 
 @media screen and (max-width:980px){
@@ -81,6 +140,12 @@ header :is(.search,.menu){ border: none; background: #f6f6f6; border-radius: 8px
      .col-t-o-before{ order: -1; }
      header form{ width: 170px;}
      header .icons a{width: 25px;}
+     .banner .caption{ left: 120px;}
+     .banner .caption p.text-lg{ margin: 0; font-size: 48px;}
+     .banner progress{  bottom: 20px; }
+     .banner .caption a{ width: 150px; line-height: 40px; margin-top: 2rem;}
+     .deal-text .p2{ font-size: 24px; margin: 15px 0 8px; }
+     .deal-text a{ margin-top: 20px;}
 }
 
 @media screen and (max-width:767px){
@@ -93,6 +158,8 @@ header :is(.search,.menu){ border: none; background: #f6f6f6; border-radius: 8px
      .col-m-hide{ display: none;}
      header :is(form,nav){display: none;}
      header :is(.search,.menu){ display: inline-block;}
+     .banner .caption{ left: 60px;}
+     .banner .controls{ font-size: 20px; }
 }
 
 @media screen and (max-width:460px){
@@ -101,6 +168,9 @@ header :is(.search,.menu){ border: none; background: #f6f6f6; border-radius: 8px
      .col-p-4{ grid-column: span 4;}
      .col-p-6{ grid-column: span 6;}
      .col-p-8{ grid-column: span 8;}
-    
+     .col-p-12{ grid-column: span 12;}
+     .banner .caption p{ font-size: 16px; }
+    .banner .caption p.text-lg{ font-size: 24px;}
+    .banner progress{ bottom: 10px;}
  
 }
